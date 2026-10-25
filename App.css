@@ -1,0 +1,690 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf5;
+  color: #38251d;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  max-width: 100%;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.shop {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Header */
+.header, .navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 15px 5%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px #4827190d;
+}
+
+.logo, .brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: #8a3e25;
+}
+
+.header nav, .navbar nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header nav a:hover,
+.navbar nav a:hover {
+  color: #bd673b;
+}
+
+/* Buttons */
+.header button,
+.main-button,
+.customer-form button,
+.sweet-form button {
+  border: 0;
+  background: #873e27;
+  color: white;
+  border-radius: 7px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.header button:hover,
+.main-button:hover,
+.customer-form button:hover,
+.sweet-form button:hover {
+  background: #5d291a;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  min-height: 350px;
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9e1c9, #fff4e7);
+}
+
+.hero > p:first-child {
+  color: #a95c35;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 58px);
+  line-height: 1.2;
+  margin: 16px 0;
+  color: #71351f;
+  overflow-wrap: anywhere;
+}
+
+.hero p {
+  color: #816b5d;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* Sections */
+.section,
+.sweets-section,
+.cart-section,
+.order-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 55px 24px;
+}
+
+.section h2,
+.panel h2 {
+  font-size: 28px;
+  color: #71351f;
+  margin-top: 0;
+}
+
+/* Search */
+.search,
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin: 20px 0 28px;
+  padding: 13px 15px;
+  border: 1px solid #e7d4c5;
+  border-radius: 7px;
+  outline-color: #b96b43;
+  background: white;
+  color: #222;
+}
+
+.search::placeholder,
+.search-input::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+/* Sweets grid */
+.sweet-grid,
+.sweet-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.sweet-card {
+  min-width: 0;
+  width: 100%;
+  padding: 18px;
+  background: white;
+  border: 1px solid #f0e2d7;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px #60371b09;
+  transition: transform 0.2s;
+}
+
+.sweet-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Sweet image */
+.sweet-emoji {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #f6e1cd, #fdf1e5);
+  font-size: 60px;
+}
+
+.sweet-emoji img,
+.sweet-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category {
+  color: #a25c38;
+  font-size: 12px;
+  margin: 12px 0 5px;
+}
+
+.sweet-card h3 {
+  font-size: 17px;
+  margin: 8px 0 15px;
+  overflow-wrap: anywhere;
+}
+
+.sweet-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sweet-bottom strong {
+  color: #8a3e25;
+  font-size: 17px;
+}
+
+.sweet-bottom button,
+.quantity button,
+.manage-row button {
+  border: 1px solid #e5cbb8;
+  border-radius: 6px;
+  background: #fff7f0;
+  color: #71351f;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sweet-bottom button:hover,
+.quantity button:hover,
+.manage-row button:hover {
+  background: #f4e1d1;
+}
+
+/* Cart and checkout */
+.checkout {
+  display: block;
+  width: calc(100% - 32px);
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.cart-list {
+  border-top: 1px solid #f0e4da;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0e4da;
+}
+
+.cart-row p {
+  font-size: 12px;
+  color: #927d6f;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity button {
+  padding: 5px 10px;
+}
+
+.total {
+  text-align: right;
+  color: #873e27;
+  margin: 25px 0;
+}
+
+/* Customer form */
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 550px;
+  margin: 25px auto;
+}
+
+.customer-form h2 {
+  margin-bottom: 5px;
+}
+
+.customer-form input,
+.customer-form textarea,
+.sweet-form input,
+.sweet-form select,
+.order select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d8c6b8;
+  border-radius: 7px;
+  background: white;
+  color: #222;
+}
+
+.customer-form input,
+.customer-form textarea {
+  min-height: 45px;
+}
+
+.customer-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.customer-form button {
+  width: 100%;
+  padding: 14px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  padding: 35px 20px;
+  text-align: center;
+  background: #48291e;
+  color: white;
+  overflow-wrap: anywhere;
+}
+
+footer h3 {
+  margin-bottom: 5px;
+}
+
+footer p,
+footer small {
+  color: #e4cbb9;
+  font-size: 12px;
+}
+
+/* Notification */
+.message {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  max-width: calc(100vw - 40px);
+  z-index: 20;
+  padding: 14px 20px;
+  border-radius: 7px;
+  color: white;
+  background: #3d6a43;
+  box-shadow: 0 5px 20px #0002;
+}
+
+/* Admin dashboard */
+.admin {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.admin > h1 {
+  color: #71351f;
+  font-size: clamp(26px, 4vw, 36px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stats > div {
+  min-width: 0;
+  background: white;
+  padding: 22px;
+  border: 1px solid #efdfd1;
+  border-radius: 9px;
+}
+
+.stats span {
+  color: #8d7768;
+  font-size: 12px;
+}
+
+.stats h2 {
+  color: #873e27;
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
+.panel {
+  min-width: 0;
+  padding: 22px;
+  background: white;
+  border: 1px solid #efdfd1;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.sweet-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin .sweet-form input,
+.admin .sweet-form select {
+  color: #111;
+  background: white;
+}
+
+.admin .sweet-form input::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+.manage-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1e6dd;
+}
+
+.manage-row > div {
+  flex: 1;
+  min-width: 120px;
+}
+
+.manage-row p {
+  font-size: 12px;
+  color: #8d7768;
+  margin: 5px 0 0;
+}
+
+.manage-row .delete {
+  color: #a52d24;
+  border-color: #efc9c4;
+  background: #fff4f2;
+}
+
+/* Orders */
+.order {
+  background: white;
+  color: #222;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow-wrap: anywhere;
+}
+
+.order h3 {
+  color: #873e27;
+}
+
+.order p {
+  margin: 10px 0;
+  color: #444;
+  font-size: 13px;
+}
+
+.order-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.order-status label {
+  color: #222;
+  font-weight: bold;
+}
+
+.order-status select {
+  min-width: 160px;
+  max-width: 100%;
+  padding: 10px;
+  background: white;
+  color: #222;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .sweet-grid,
+  .sweet-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .header,
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sweet-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header,
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .header nav,
+  .navbar nav {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .header nav a,
+  .navbar nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 45px 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .section,
+  .sweets-section,
+  .cart-section,
+  .order-section {
+    padding: 30px 14px;
+  }
+
+  .sweet-grid,
+  .sweet-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .sweet-emoji {
+    height: 220px;
+  }
+
+  .checkout {
+    width: calc(100% - 20px);
+    padding: 16px;
+  }
+
+  .sweet-form {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-row {
+    align-items: flex-start;
+  }
+
+  .admin {
+    padding: 25px 14px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  button {
+    min-height: 40px;
+  }
+
+  footer {
+    padding: 25px 12px;
+  }
+}
+
+/* Layout alignment fix */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.shop {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 5%;
+  margin: 0;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+/* Avoid content extending outside the screen */
+.section,
+.admin,
+.checkout,
+.panel,
+.hero {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.sweet-grid {
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 800px) {
+  .sweet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .sweet-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
